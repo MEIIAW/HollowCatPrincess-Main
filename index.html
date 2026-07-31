@@ -7,46 +7,47 @@
 <title>All Of Tetrio</title>
 </head>
 <body>
-  <div id="home" class="tab-cont active">
+  <div id="home" class="page active">
       <h1>hahahaha</h1>
     </div>
-  <div id="common" class="tab-cont">
+  <div id="common" class="page">
       2
     </div>
-  <div id="spins" class="tab-cont">
+  <div id="spins" class="page">
       3
     </div>
-  <div id="openers" class="tab-cont">
+  <div id="openers" class="page">
       4
     </div>
-  <div id="advanced" class="tab-cont">
+  <div id="advanced" class="page">
       5
     </div>
-  <div id="pattern-stacking" class="tab-cont">
+  <div id="pattern-stacking" class="page">
        <div class="card">
     <h3>hover</h3>
       <button class="hover-btn">action</button>
     </div>
     </div>
- <footer class="ft-container">
-  <div class="tab-btns">
-      <button class="tab-btn active" onclick="switchTab('home', this)">Home</button><br>
-      <button class="tab-btn" onclick="switchTab('common', this)">2</button><br>
-      <button class="tab-btn" onclick="switchTab('spins', this)">3</button><br>
-      <button class="tab-btn" onclick="switchTab('openers', this)">4</button><br>
-      <button class="tab-btn" onclick="switchTab('advanced', this)">5</button><br>
-      <button class="tab-btn" onclick="switchTab('pattern-stacking', this)">6</button>
+    <div class="page-btn-container">
+      <button class="page-btn active" onclick="switchTab('home', this)">Home</button><br>
+      <button class="page-btn" onclick="switchTab('common', this)">2</button><br>
+      <button class="page-btn" onclick="switchTab('spins', this)">3</button><br>
+      <button class="page-btn" onclick="switchTab('openers', this)">4</button><br>
+      <button class="page-btn" onclick="switchTab('advanced', this)">5</button><br>
+      <button class="page-btn" onclick="switchTab('pattern-stacking', this)">6</button>
     </div>
+ <footer class="ft-container">
+  
     <div class="card box">hoover</div>
    </footer>
 <script>
     function switchTab(tabId, clickedBtn) {
-      const allContents = document.querySelectorAll('.tab-cont');
+      const allContents = document.querySelectorAll('.page');
       allContents.forEach(content => {
         content.classList.remove('active');
         });
       
-      const allButtons = document.querySelectorAll('.tab-btn');
+      const allButtons = document.querySelectorAll('.page-btn');
       allButtons.forEach(btn => {
         btn.classList.remove('active');
         });
