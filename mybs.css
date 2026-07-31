@@ -6,7 +6,7 @@
   display:block;
 }
 
-.tab-btns {
+.tab-btn {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -16,7 +16,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.box:hover .tab-btns {
+.box:hover .tab-btn {
   opacity: 1;
   visibility: visible;
 }
