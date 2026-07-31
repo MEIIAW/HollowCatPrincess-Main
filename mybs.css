@@ -1,0 +1,15 @@
+.tab-cont {
+  display: none;
+}
+
+.tab-cont.active {
+  display:block;
+}
+
+.tab-btn {
+
+}
+
+.tab-btn.active {
+  
+}
