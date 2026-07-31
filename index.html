@@ -1,0 +1,53 @@
+<!DOCTYPE=html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="img/favicon.png"> 
+<link rel="stylesheet" href="mybs.css">
+<title>All Of Tetrio</title>
+</head>
+<body>
+  <div id="home" class="tab-cont active">
+      1
+    </div>
+  <div id="common" class="tab-cont">
+      2
+    </div>
+  <div id="spins" class="tab-cont">
+      3
+    </div>
+  <div id="openers" class="tab-cont">
+      4
+    </div>
+  <div id="advanced" class="tab-cont">
+      5
+    </div>
+  <div id="pattern-stacking" class="tab-cont">
+      6
+    </div>
+  <div class="tab-btns">
+      <button class="tab-btn active" onclick="switchtab('home', this)">1</button><br>
+      <button class="tab-btn" onclick="switchTab('common', this)">2</button><br>
+      <button class="tab-btn" onclick="switchTab('spins', this)">3</button><br>
+      <button class="tab-btn" onclick="switchTab('openers', this)">4</button><br>
+      <button class="tab-btn" onclick="switchTab('advanced', this)">5</button><br>
+      <button class="tab-btn" onclick="switchTab('pattern-stacking', this)">6</button>
+    </div>
+<script>
+    function switchTab(tabId, clickedBtn) {
+      const allContents = document.querySelectorAll('.tab-cont');
+      allContents.forEach(content => {
+        content.classList.remove('active');
+        });
+      
+      const allButtons = document.querySelectorAll('.tab-btn');
+      allButtons.forEach(btn => {
+        btn.classList.remove('active');
+        });
+      
+      document.getElementById(tabId).classList.add('active');
+      clickedBtn.classList.add('active');
+      }
+  </script>
+</body>
+</html>
