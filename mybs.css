@@ -13,3 +13,11 @@
 .tab-btn.active {
   
 }
+
+.card .hover-btn {
+  display: none;
+}
+
+.card:hover .hover-btn {
+  display: block;
+}
