@@ -1,3 +1,25 @@
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .tab-cont {
   display: none;
 }
