@@ -7,44 +7,51 @@
 <title>All Of Tetrio</title>
 </head>
 <body>
+<div id="meow">
   <div id="home" class="page active">
-      <h1>hahahaha</h1>
+      <h1>I was tired of not being able to find anything quickly unless i knew the exact name of what i was searching for on sites like four.lol and harddrop wiki, so I'm making this as an alternative</h1>
     </div>
-  <div id="common" class="page">
-      2
-    </div>
-  <div id="spins" class="page">
-      3
+  <div id="rotations_and_spins" class="page">
+      spins
     </div>
   <div id="openers" class="page">
-      4
+      openers
     </div>
-  <div id="advanced" class="page">
-      5
+  <div id="setups" class="page">
+      setups
     </div>
-  <div id="pattern-stacking" class="page">
-       <div class="card">
-    <h3>hover</h3>
-      <button class="hover-btn">action</button>
+  <div id="common_situations_solves" class="page">
+      meow
     </div>
-    </div>
-    <div class="page-btn-container">
-
-    </div>
+  <div id="credits" class="page">
+      credits
+      </div>
  <footer class="ftr-container">
-  
+  </footer>
+  </div>
     <div class="main-menu">
     
-          <button class="page-btn active" onclick="switchTab('home', this)">Home</button><br>
-          <button class="page-btn" onclick="switchTab('common', this)">2</button><br>
-          <button class="page-btn" onclick="switchTab('spins', this)">3</button><br>
-          <button class="page-btn" onclick="switchTab('openers', this)">4</button><br>
-          <button class="page-btn" onclick="switchTab('advanced', this)">5</button><br>
-          <button class="page-btn" onclick="switchTab('pattern-stacking', this)">6</button>
-          <h3 class="tachyon"><img class="tachyon" src="img/tachyon.png"></h3>
+          <button class="page-btn active" onclick="switchTab('home', this)">Home</button><br><br>
+          <button class="page-btn" onclick="switchTab('rotations_and_spins', this)">Rotations and Spins</button><br><br>
+          <button class="page-btn" onclick="switchTab('openers', this)">Openers</button><br><br>
+          <button class="page-btn" onclick="switchTab('setups', this)">Setups</button><br><br>
+          <button class="page-btn" onclick="switchTab('common_situations_solves', this)">Common Situations Solves</button><br><br>
+          <button class="page-btn" onclick="switchTab('credits', this)">Credits</button>
+          <h3 id="tachyon"><img id="tachyon" src="img/tachyon.png"></h3>
       </div>
-   </footer>
+
 <script>
+// .toggle active
+    document.querySelectorAll('.toggle').forEach(
+      box => {
+        box.addEventListener('click',(e) => {
+          e.stopPropagation();
+          
+        box.classList.toggle('active');
+        });
+        });
+
+// main pages toggle
     function switchTab(tabId, clickedBtn) {
       const allContents = document.querySelectorAll('.page');
       allContents.forEach(content => {
